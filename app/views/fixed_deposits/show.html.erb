@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account number:</strong>
+  <%= @fixed_deposit.account_number %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @fixed_deposit.customer_id %>
+</p>
+
+<p>
+  <strong>Opening date:</strong>
+  <%= @fixed_deposit.opening_date %>
+</p>
+
+<%= link_to 'Edit', edit_fixed_deposit_path(@fixed_deposit) %> |
+<%= link_to 'Back', fixed_deposits_path %>

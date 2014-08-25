@@ -1,0 +1,31 @@
+<h1>Listing fixed_deposits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Account number</th>
+      <th>Customer</th>
+      <th>Opening date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fixed_deposits.each do |fixed_deposit| %>
+      <tr>
+        <td><%= fixed_deposit.account_number %></td>
+        <td><%= fixed_deposit.customer_id %></td>
+        <td><%= fixed_deposit.opening_date %></td>
+        <td><%= link_to 'Show', fixed_deposit %></td>
+        <td><%= link_to 'Edit', edit_fixed_deposit_path(fixed_deposit) %></td>
+        <td><%= link_to 'Destroy', fixed_deposit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fixed deposit', new_fixed_deposit_path %>

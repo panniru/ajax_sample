@@ -1,0 +1,34 @@
+<%= form_for(@fixed_deposit) do |f| %>
+  <% if @fixed_deposit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fixed_deposit.errors.count, "error") %> prohibited this fixed_deposit from being saved:</h2>
+
+      <ul>
+      <% @fixed_deposit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- <div class="field"> -->
+  <!--   <%= f.label :account_number %><br> -->
+  <!--   <%= f.text_field :account_number %> -->
+  <!-- </div> -->
+  <!-- <div class="field"> -->
+  <!--   <%= f.label :customer_id %><br> -->
+  <!--   <%= f.text_field :customer_id %> -->
+  <!-- </div> -->
+  <div class="field">
+    <%= f.label :opening_date %><br>
+    <%= f.text_field :opening_date , :class => "datepicker", :id => "openingDate"%>
+    <%= button_tag "Get Interest", :type => "button",:onclick => "fetchInterest()" %>
+  </div>
+  <div class="field">
+    <%= label_tag 'Interest %' %><br>
+    <%= text_field_tag 'interest', "",:id => "cuculated_interest", :readonly => true %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
