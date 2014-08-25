@@ -22,11 +22,11 @@
   <div class="field">
     <%= f.label :opening_date %><br>
     <%= f.text_field :opening_date , :class => "datepicker", :id => "openingDate"%>
-    <%= button_tag "Get Interest", :type => "button",:onclick => "fetchInterest()" %>
+    <%= button_tag "Get Interest", :type => "button", :onclick => "fetchInterest()" %>
   </div>
   <div class="field">
     <%= label_tag 'Interest %' %><br>
-    <%= text_field_tag 'interest', "",:id => "cuculated_interest", :readonly => true %>
+    <%= text_field_tag 'interest', "",:id => "calculated_interest", :readonly => true %>
   </div>
   <div class="actions">
     <%= f.submit %>

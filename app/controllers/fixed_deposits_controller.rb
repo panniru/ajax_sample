@@ -79,7 +79,7 @@ class FixedDepositsController < ApplicationController
           data = {:interest => fd_interest.interest_percentage}
         else
           # some logic to generate interest percentage
-          t1 = DateTime.strptime(params[:opening_date], "%d-%m-%Y") #params[:opening_date]'s date format is the format which we mentioned on defining the date picker
+          t1 = DateTime.strptime(params[:opening_date], "%d-%m-%Y") #params[:opening_date]'s format is the format which we mentioned at date picker definition in ../fixed_deposits.js
           t2 = DateTime.now
           data = {:interest => (t2-t1).to_f*0.25}
         end

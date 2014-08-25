@@ -19,7 +19,7 @@ function fetchInterest(){
     })
         .done(function( data ) {
             //alert( "Response: " + data["interest"] );
-            $("#cuculated_interest").val(data["interest"])
+            $("#calculated_interest").val(data["interest"])
         })
         .fail(function() {
             alert( "error" );
